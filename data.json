@@ -1,0 +1,852 @@
+[
+    {
+        "text": "How to create a one-to-many relationship in\na database design.",
+        "start": 0.0,
+        "duration": 0.16
+    },
+    {
+        "text": "Today, you're going to learn what a one-to-many\nrelationship is in a database design.",
+        "start": 0.16,
+        "duration": 4.0
+    },
+    {
+        "text": "How to represent it in a diagram, and how\u00a0",
+        "start": 4.72,
+        "duration": 2.48
+    },
+    {
+        "text": "to know if you need to use\u00a0\na one-to-many relationship.",
+        "start": 7.2,
+        "duration": 2.64
+    },
+    {
+        "text": "I use this method and this type of relationship\nin every database that I've designed over",
+        "start": 10.48,
+        "duration": 4.32
+    },
+    {
+        "text": "the last 15 years of my career.",
+        "start": 14.8,
+        "duration": 1.92
+    },
+    {
+        "text": "By the end of this video, you'll see the technique\nthat I use to determine if a one-to-many is",
+        "start": 16.72,
+        "duration": 5.52
+    },
+    {
+        "text": "needed in the database.",
+        "start": 22.24,
+        "duration": 1.12
+    },
+    {
+        "text": "How do we design a one-to-many relationship\nin a database?",
+        "start": 24.32,
+        "duration": 2.8
+    },
+    {
+        "text": "There are seven steps that you can follow.",
+        "start": 27.92,
+        "duration": 2.32
+    },
+    {
+        "text": "I'll explain each of them in this video.",
+        "start": 30.24,
+        "duration": 1.68
+    },
+    {
+        "text": "Step one is to understand the definition of\na one-to-many relationship.",
+        "start": 32.88,
+        "duration": 3.68
+    },
+    {
+        "text": "What is a one-to-many relationship?",
+        "start": 37.36,
+        "duration": 1.76
+    },
+    {
+        "text": "In the database, tables are created to store\ndata.",
+        "start": 40.0,
+        "duration": 4.0
+    },
+    {
+        "text": "Each table usually represents an object you\nwant to store data about, such as a person,",
+        "start": 44.0,
+        "duration": 5.04
+    },
+    {
+        "text": "a car, a product, or business.",
+        "start": 49.04,
+        "duration": 2.16
+    },
+    {
+        "text": "For a database to work efficiently you need\nto be able to relate these different tables",
+        "start": 52.96,
+        "duration": 4.4
+    },
+    {
+        "text": "together.",
+        "start": 57.36,
+        "duration": 0.48
+    },
+    {
+        "text": "This is how you an store data where it needs\nto be stored, and also find data that relates",
+        "start": 58.64,
+        "duration": 5.2
+    },
+    {
+        "text": "to each other when needed.",
+        "start": 63.84,
+        "duration": 1.12
+    },
+    {
+        "text": "For example, having tables related to each\nother will let you find out how many orders",
+        "start": 65.6,
+        "duration": 4.64
+    },
+    {
+        "text": "a customer's made, how many cars are currently\nin each car showroom, and how many students",
+        "start": 70.24,
+        "duration": 4.88
+    },
+    {
+        "text": "are enrolled in each course.",
+        "start": 75.12,
+        "duration": 1.12
+    },
+    {
+        "text": "How does a one-to-many relationship fit into\nthis?",
+        "start": 77.44,
+        "duration": 2.32
+    },
+    {
+        "text": "A one-to-many relationship is a way that two\ntables relate to each other.",
+        "start": 80.72,
+        "duration": 3.68
+    },
+    {
+        "text": "It means that one record in one table can\nbe related to many records in another table.",
+        "start": 85.04,
+        "duration": 4.72
+    },
+    {
+        "text": "One example of this is a traditional relationship\nbetween a customer table and an order table.",
+        "start": 90.64,
+        "duration": 4.8
+    },
+    {
+        "text": "A customer can have many orders that they\nplace with the business over time, but an",
+        "start": 96.4,
+        "duration": 4.48
+    },
+    {
+        "text": "order can only belong to one customer.",
+        "start": 100.88,
+        "duration": 1.84
+    },
+    {
+        "text": "Therefore, the customer to order relationship\nis said to be one-to-many.",
+        "start": 103.68,
+        "duration": 3.36
+    },
+    {
+        "text": "That's what a one-to-many relationship is.",
+        "start": 108.4,
+        "duration": 1.92
+    },
+    {
+        "text": "One record in one table can be led to many\nrecords in another table.",
+        "start": 111.12,
+        "duration": 3.92
+    },
+    {
+        "text": "How do we implement that for our database?",
+        "start": 116.0,
+        "duration": 1.84
+    },
+    {
+        "text": "We move on to step two.",
+        "start": 118.48,
+        "duration": 1.2
+    },
+    {
+        "text": "Step two is where where we write down what\nwe're trying to design in a sentence.",
+        "start": 120.56,
+        "duration": 3.52
+    },
+    {
+        "text": "Writing it down help us determine if relationship\nbetween to tables is a one-to-many relationship.",
+        "start": 125.12,
+        "duration": 5.12
+    },
+    {
+        "text": "Other types of relationships are one-to-one\nand one-to-many, which I'll cover in separate",
+        "start": 131.44,
+        "duration": 4.88
+    },
+    {
+        "text": "videos.",
+        "start": 136.32,
+        "duration": 0.48
+    },
+    {
+        "text": "For now, write down what you want to store\nin a sentence.",
+        "start": 137.92,
+        "duration": 4.16
+    },
+    {
+        "text": "Some examples of this are: Store the customer\ninformation and the order that they've made.",
+        "start": 142.08,
+        "duration": 4.08
+    },
+    {
+        "text": "Store the cars and the showroom that they\nare located in.",
+        "start": 146.96,
+        "duration": 2.56
+    },
+    {
+        "text": "Or, store the students and the courses they\nare enrolled in at a specific date.",
+        "start": 149.52,
+        "duration": 4.48
+    },
+    {
+        "text": "Write down what you want to store.",
+        "start": 155.68,
+        "duration": 1.28
+    },
+    {
+        "text": "Try to keep it limited to just your two tables\nor two objects for now.",
+        "start": 158.0,
+        "duration": 2.64
+    },
+    {
+        "text": "If you need to write down more, you can, but\nit's easy to just start with the two.",
+        "start": 161.6,
+        "duration": 3.84
+    },
+    {
+        "text": "Let's move on to step three.",
+        "start": 166.96,
+        "duration": 1.28
+    },
+    {
+        "text": "Step three is to write down the objects from\nthis sentence.",
+        "start": 169.68,
+        "duration": 2.72
+    },
+    {
+        "text": "This will help you work out what tables are\ngoing to be needed.",
+        "start": 172.96,
+        "duration": 2.88
+    },
+    {
+        "text": "Take a look at the sentence you just wrote\ndown.",
+        "start": 177.2,
+        "duration": 1.92
+    },
+    {
+        "text": "Identify the words that describe objects in\nthe sentence.",
+        "start": 180.0,
+        "duration": 2.8
+    },
+    {
+        "text": "These are nouns or words that refer to things.",
+        "start": 183.68,
+        "duration": 2.72
+    },
+    {
+        "text": "Let's use the examples we looked at earlier.",
+        "start": 187.68,
+        "duration": 2.16
+    },
+    {
+        "text": "In the first example, store\u00a0\nthe customer information\u00a0",
+        "start": 189.84,
+        "duration": 2.4
+    },
+    {
+        "text": "and the orders that they've made.",
+        "start": 192.24,
+        "duration": 1.12
+    },
+    {
+        "text": "In this example,\u00a0\u00a0",
+        "start": 195.84,
+        "duration": 1.28
+    },
+    {
+        "text": "customer, or customer information,\nand the orders are the objects.",
+        "start": 197.12,
+        "duration": 2.24
+    },
+    {
+        "text": "Store the cars in the showrooms that they're\nlocated in.",
+        "start": 199.36,
+        "duration": 2.48
+    },
+    {
+        "text": "In this sentence, we have cars and showroom.",
+        "start": 202.72,
+        "duration": 2.72
+    },
+    {
+        "text": "Store the students and the courses they're\nenrolled in at a specific date.",
+        "start": 205.44,
+        "duration": 3.6
+    },
+    {
+        "text": "In this example, we have students, courses,\nand date.",
+        "start": 210.0,
+        "duration": 2.88
+    },
+    {
+        "text": "We now have our objects.",
+        "start": 213.84,
+        "duration": 1.28
+    },
+    {
+        "text": "This will help us identify the one-to-many\nrelationships in our database, and help us",
+        "start": 215.68,
+        "duration": 4.72
+    },
+    {
+        "text": "draw them in a diagram, and get them working\ncorrectly in our database.",
+        "start": 220.4,
+        "duration": 3.44
+    },
+    {
+        "text": "Let's move on to step four.",
+        "start": 224.56,
+        "duration": 1.28
+    },
+    {
+        "text": "Step four is where we determine if it's a\none-to-many relationship.",
+        "start": 226.88,
+        "duration": 3.36
+    },
+    {
+        "text": "This is an important step.",
+        "start": 231.04,
+        "duration": 1.28
+    },
+    {
+        "text": "Not all of the relationships we define will\nbe one-to-many.",
+        "start": 233.2,
+        "duration": 3.04
+    },
+    {
+        "text": "This step will let you identify if they are\nor not.",
+        "start": 237.04,
+        "duration": 2.8
+    },
+    {
+        "text": "To work out if a relationship is a one-to-many\nrelationship, ask yourself this question.",
+        "start": 240.4,
+        "duration": 4.48
+    },
+    {
+        "text": "Using the two objects that you have identified\nfrom the previous step, does object one have",
+        "start": 244.88,
+        "duration": 5.04
+    },
+    {
+        "text": "many object twos, or does object two have\nmany object ones?",
+        "start": 249.92,
+        "duration": 4.32
+    },
+    {
+        "text": "This will help you work out which way your\nrelationship goes, and if it's a one-to-many",
+        "start": 254.24,
+        "duration": 4.56
+    },
+    {
+        "text": "relationship.",
+        "start": 258.8,
+        "duration": 0.64
+    },
+    {
+        "text": "If you substitute the word object with your\nobjects from the previous step, your questions",
+        "start": 260.48,
+        "duration": 4.4
+    },
+    {
+        "text": "may look like this: Does a customer have many\norders, or does than order have many customers?",
+        "start": 264.88,
+        "duration": 6.0
+    },
+    {
+        "text": "Does a car have many showrooms, or does a\nshowroom have many cars?",
+        "start": 270.88,
+        "duration": 3.52
+    },
+    {
+        "text": "Does a student have many courses, or does\na course have many students?",
+        "start": 275.52,
+        "duration": 3.36
+    },
+    {
+        "text": "In most cases, only one part of this question\nwill make sense to you.",
+        "start": 280.08,
+        "duration": 3.36
+    },
+    {
+        "text": "Look at the question and determine which side\nof it makes sense, based on your understanding",
+        "start": 284.24,
+        "duration": 4.32
+    },
+    {
+        "text": "of the system and the business you're capturing\nthis for.",
+        "start": 288.56,
+        "duration": 2.24
+    },
+    {
+        "text": "In the first example, a customer can have\nmany order, but an order cannot have many",
+        "start": 291.36,
+        "duration": 4.64
+    },
+    {
+        "text": "customers.",
+        "start": 296.0,
+        "duration": 0.56
+    },
+    {
+        "text": "An order can only have one customer, so the\ncustomer order relationship here is one-to-many,",
+        "start": 297.28,
+        "duration": 5.04
+    },
+    {
+        "text": "or the customer to teddy bear relationship.",
+        "start": 302.32,
+        "duration": 1.28
+    },
+    {
+        "text": "In the second example, a car does not have\nmany showrooms.",
+        "start": 303.6,
+        "duration": 2.96
+    },
+    {
+        "text": "It can't be in multiple showrooms.",
+        "start": 307.28,
+        "duration": 1.84
+    },
+    {
+        "text": "It can only be in one.",
+        "start": 309.12,
+        "duration": 1.12
+    },
+    {
+        "text": "A showroom has many cars, so the showroom\nto car relationship is a one-to-many relationship.",
+        "start": 311.12,
+        "duration": 5.52
+    },
+    {
+        "text": "In the third example, a student can have many\ncourses.",
+        "start": 317.76,
+        "duration": 2.64
+    },
+    {
+        "text": "In this example, they can be enrolled in courses\nin different dates.",
+        "start": 321.36,
+        "duration": 3.36
+    },
+    {
+        "text": "Also, a course can have many students.",
+        "start": 325.68,
+        "duration": 1.92
+    },
+    {
+        "text": "This is a situation where both sides of the\nquestion make sense.",
+        "start": 328.72,
+        "duration": 3.12
+    },
+    {
+        "text": "It means it's a many-to-many relationship.",
+        "start": 332.64,
+        "duration": 1.84
+    },
+    {
+        "text": "I'll explain this in the separate video, as\nit requires a different process to get it",
+        "start": 335.36,
+        "duration": 4.24
+    },
+    {
+        "text": "working.",
+        "start": 339.6,
+        "duration": 0.4
+    },
+    {
+        "text": "Now, we have our question answered.",
+        "start": 341.44,
+        "duration": 1.68
+    },
+    {
+        "text": "Let's move on to step five.",
+        "start": 343.12,
+        "duration": 1.28
+    },
+    {
+        "text": "Step five is to create the diagram with these\ntwo tables.",
+        "start": 345.92,
+        "duration": 2.96
+    },
+    {
+        "text": "We're just going to draw them.",
+        "start": 349.6,
+        "duration": 1.44
+    },
+    {
+        "text": "We won't link them yet.",
+        "start": 351.04,
+        "duration": 0.8
+    },
+    {
+        "text": "You can do this with pen and paper or use\na program to do it.",
+        "start": 353.04,
+        "duration": 3.12
+    },
+    {
+        "text": "I've done many with pen and paper, and it's\neasy to do.",
+        "start": 357.04,
+        "duration": 2.64
+    },
+    {
+        "text": "In this video, I'll use a diagramming tool\ncalled Lucidchart, which is my diagramming",
+        "start": 359.68,
+        "duration": 4.64
+    },
+    {
+        "text": "tool of choice.",
+        "start": 364.32,
+        "duration": 1.6
+    },
+    {
+        "text": "I'll have a separate video on how to use this\ntool.",
+        "start": 365.92,
+        "duration": 2.32
+    },
+    {
+        "text": "For now, all you need to know is the concept\nthat's being drawn.",
+        "start": 369.04,
+        "duration": 2.88
+    },
+    {
+        "text": "This is called an entity relationship diagram,\nor an ERD.",
+        "start": 372.88,
+        "duration": 2.96
+    },
+    {
+        "text": "It's a common way to draw database tables\nand how they relate to each other.",
+        "start": 376.72,
+        "duration": 3.6
+    },
+    {
+        "text": "We'll need to draw two tables.",
+        "start": 381.44,
+        "duration": 1.68
+    },
+    {
+        "text": "I'll do this for each of my examples.",
+        "start": 383.92,
+        "duration": 1.84
+    },
+    {
+        "text": "Let's space them out a little bit.",
+        "start": 385.76,
+        "duration": 0.72
+    },
+    {
+        "text": "I've drawn the first table on the left and\nthe second table on the right.",
+        "start": 386.48,
+        "duration": 2.588
+    },
+    {
+        "text": "Heres the car table and here is the showroom\ntable.",
+        "start": 389.068,
+        "duration": 1.63
+    },
+    {
+        "text": "Further down, we have the customer table and\nthe order table, for the second example.",
+        "start": 390.698,
+        "duration": 3.183
+    },
+    {
+        "text": "In the third example, we have the student\nand the course table.",
+        "start": 393.881,
+        "duration": 4.119
+    },
+    {
+        "text": "You can do the same thing on paper or in a\nprogram with your tables.",
+        "start": 399.44,
+        "duration": 3.2
+    },
+    {
+        "text": "You don't have to use Lucidchart.",
+        "start": 403.36,
+        "duration": 2.0
+    },
+    {
+        "text": "You can use Microsoft Visio,\u00a0\nor Word, or PowerPoint,\u00a0",
+        "start": 405.36,
+        "duration": 3.28
+    },
+    {
+        "text": "or MySQL Workbench, or any other tool that",
+        "start": 408.64,
+        "duration": 2.32
+    },
+    {
+        "text": "supports this kind of diagramming.",
+        "start": 410.96,
+        "duration": 1.04
+    },
+    {
+        "text": "Now, you have your two tables here.",
+        "start": 413.36,
+        "duration": 1.6
+    },
+    {
+        "text": "They don't need columns for now.",
+        "start": 415.6,
+        "duration": 1.84
+    },
+    {
+        "text": "That's a later stage.",
+        "start": 417.44,
+        "duration": 1.04
+    },
+    {
+        "text": "Let's move on to step six of the seven steps.",
+        "start": 419.44,
+        "duration": 2.4
+    },
+    {
+        "text": "Step six is to draw a line between the two\ntables.",
+        "start": 423.2,
+        "duration": 2.64
+    },
+    {
+        "text": "We're just going to draw a single line.",
+        "start": 426.88,
+        "duration": 1.84
+    },
+    {
+        "text": "This lets us know that there's a relationship\nbetween the two tables.",
+        "start": 429.44,
+        "duration": 3.36
+    },
+    {
+        "text": "You can draw it with pen, if you're doing\nthis on paper, or use your software tool.",
+        "start": 433.76,
+        "duration": 3.76
+    },
+    {
+        "text": "In Lucidchart, I'll just need to drag a line\nfrom one table to the other, and join them",
+        "start": 437.52,
+        "duration": 0.672
+    },
+    {
+        "text": "like this.",
+        "start": 438.192,
+        "duration": 0.078
+    },
+    {
+        "text": "We can just ignore the arrow for now.",
+        "start": 438.271,
+        "duration": 0.289
+    },
+    {
+        "text": "Now, I've drawn a line between the two tables\nin each of my examples here.",
+        "start": 438.56,
+        "duration": 3.44
+    },
+    {
+        "text": "Let's move on to step seven, which is the\u00a0",
+        "start": 443.04,
+        "duration": 1.76
+    },
+    {
+        "text": "final step of diagramming\u00a0\na one-to-many relationship.",
+        "start": 444.8,
+        "duration": 2.64
+    },
+    {
+        "text": "Step seven is to add to our diagram to describe\nthe one-to-many relationship.",
+        "start": 448.88,
+        "duration": 3.92
+    },
+    {
+        "text": "Our ERD will show which tables are one-to-many\nand which tables follow different relationships.",
+        "start": 453.76,
+        "duration": 4.72
+    },
+    {
+        "text": "We add a symbol to the line between the two\ntables to indicate that it's a one-to-many",
+        "start": 459.28,
+        "duration": 4.24
+    },
+    {
+        "text": "relationship.",
+        "start": 463.52,
+        "duration": 0.72
+    },
+    {
+        "text": "There are few different symbols or methods\nthat can be used.",
+        "start": 465.28,
+        "duration": 2.88
+    },
+    {
+        "text": "My preference is something called crow's foot\nnotation, because the symbol kind of looks",
+        "start": 468.88,
+        "duration": 3.242
+    },
+    {
+        "text": "like a crow's foot.",
+        "start": 472.122,
+        "duration": 0.358
+    },
+    {
+        "text": "This means we add some more angled lines to\nthe end of one of the lines here.",
+        "start": 472.48,
+        "duration": 4.6
+    },
+    {
+        "text": "It goes on one side of the line in the one-to-many\nrelationship.",
+        "start": 477.68,
+        "duration": 3.28
+    },
+    {
+        "text": "It means the side with this symbol is on the\nmany side of the one-to-many relationship.",
+        "start": 481.92,
+        "duration": 3.76
+    },
+    {
+        "text": "Let's do that with our examples.",
+        "start": 486.72,
+        "duration": 1.44
+    },
+    {
+        "text": "On the car and showroom example, the line\nwill look like this.",
+        "start": 488.16,
+        "duration": 0.483
+    },
+    {
+        "text": "This is because a showroom has many cars.",
+        "start": 488.643,
+        "duration": 0.325
+    },
+    {
+        "text": "On the many side, we have this line ending\nhere.",
+        "start": 488.968,
+        "duration": 0.372
+    },
+    {
+        "text": "This will let us know that one showroom has\nmany cars.",
+        "start": 489.34,
+        "duration": 0.42
+    },
+    {
+        "text": "On the customer and order table, we know that\na customer has many orders.",
+        "start": 489.76,
+        "duration": 3.92
+    },
+    {
+        "text": "So, on the many side, which is on the order\nside, we change the icon to use this.",
+        "start": 494.56,
+        "duration": 2.64
+    },
+    {
+        "text": "This is what it looks like in Lucidchart.",
+        "start": 498.4,
+        "duration": 1.92
+    },
+    {
+        "text": "In your tool, it many look similar.",
+        "start": 500.88,
+        "duration": 1.52
+    },
+    {
+        "text": "You can just draw the lines like this, if\nyou're using pen and paper.",
+        "start": 503.36,
+        "duration": 2.48
+    },
+    {
+        "text": "In the third example, we identified earlier\nthat a student has many courses and a course",
+        "start": 517.68,
+        "duration": 1.649
+    },
+    {
+        "text": "has many students.",
+        "start": 519.329,
+        "duration": 0.018
+    },
+    {
+        "text": "This means a line goes on both sides.",
+        "start": 519.347,
+        "duration": 1.213
+    },
+    {
+        "text": "I'll have another video that explains why\nthis is an issue and how to resolve it, but",
+        "start": 521.28,
+        "duration": 4.0
+    },
+    {
+        "text": "that's okay for now.",
+        "start": 525.28,
+        "duration": 0.96
+    },
+    {
+        "text": "Now, you're done.",
+        "start": 527.04,
+        "duration": 0.64
+    },
+    {
+        "text": "You've successfully gone from having some\nidea of what you want to store in your database",
+        "start": 528.32,
+        "duration": 3.76
+    },
+    {
+        "text": "for two objects, to defining the relationship\nbetween two of them and drawing it on a diagram.",
+        "start": 532.08,
+        "duration": 5.04
+    },
+    {
+        "text": "That's how you model a one-to-many relationship\nin a database.",
+        "start": 538.0,
+        "duration": 2.96
+    },
+    {
+        "text": "If you learned something new from this video,\nmake sure to subscribe to my channel, If you",
+        "start": 542.48,
+        "duration": 4.64
+    },
+    {
+        "text": "want to learn more about database design and\ndevelopment, visit databasestar.com.",
+        "start": 547.12,
+        "duration": 4.4
+    },
+    {
+        "text": "That's where I share my best database related\ncontent.",
+        "start": 552.16,
+        "duration": 2.4
+    },
+    {
+        "text": "Which step from this tutorial was the most\nhelpful for you?",
+        "start": 555.68,
+        "duration": 2.56
+    },
+    {
+        "text": "Was it step four with the sentence that our\nwrote, or step seven about adding the foreign",
+        "start": 558.8,
+        "duration": 3.76
+    },
+    {
+        "text": "key, or something else?",
+        "start": 562.56,
+        "duration": 1.2
+    },
+    {
+        "text": "Thanks for watching.",
+        "start": 564.4,
+        "duration": 2.96
+    }
+]
